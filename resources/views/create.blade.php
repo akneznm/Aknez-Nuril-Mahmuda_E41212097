@@ -20,6 +20,10 @@
               <input type="text" name="nama_kapal" id="nama_kapal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Foto</label>
+              <input type="file" name="foto" id="foto" class="form-control" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Jenis Kapal</label>
               <input type="text" name="jenis_kapal" id="jenis_kapal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>

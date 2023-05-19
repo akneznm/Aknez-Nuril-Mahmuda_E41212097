@@ -15,6 +15,7 @@ class CreateMaritimsTable extends Migration
     {
         Schema::create('maritims', function (Blueprint $table) {
             $table->id();
+            $table->string('foto');
             $table->string('nama_kapal');
             $table->string('jenis_kapal');
             $table->string('nomor_seri');

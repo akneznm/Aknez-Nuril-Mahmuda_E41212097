@@ -21,7 +21,12 @@ class MaritimController extends Controller
     }
     public function insert(Request $request)
     {
-        Maritim::create($request->all());
+        $data = Maritim::create($request->all());
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotokapal/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
 
         return redirect()->route('maritim.index')->with('success', 'Data maritim baru telah berhasil disimpan');
     }

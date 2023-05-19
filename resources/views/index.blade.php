@@ -21,6 +21,7 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nama Kapal</th>
+          <th scope="col">Foto Kapal</th>
           <th scope="col">Jenis Kapal</th>
           <th scope="col">Nomor Seri</th>
           <th scope="col">Tahun Dibuat</th>
@@ -35,6 +36,9 @@
         <tr>
           <th scope="row">{{ $no++ }}</th>
           <td>{{ $row->nama_kapal }}</td>
+          <td>
+            <img src="{{ asset('fotokapal/'.$row->foto) }}" style="width: 40px;" alt="">
+          </td>
           <td>{{ $row->jenis_kapal }}</td>
           <td>{{ $row->nomor_seri}}</td>
           <td>{{ $row->tahun_dibuat }}</td>
